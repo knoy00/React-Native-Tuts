@@ -8,6 +8,7 @@ export default function Profile() {
     <View style={styles.container}>
       <Text style={styles.title}>Profile</Text>
       <Text style={styles.btn} onPress={()=> router.push('/(tabs)/explore')}>Tap to go explore</Text>
+      <Text style={styles.newProfile}>Create a new profile</Text>
     </View>
   )
 }
@@ -16,6 +17,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
 
     },
     title: {
@@ -30,9 +33,15 @@ const styles = StyleSheet.create({
         fontSize: 20,
         backgroundColor: '#efefef',
         width: '50%',
-        margin: 'auto',
-        borderRadius: 10,
         padding: 10,
-        userSelect: 'none'
+        height: 40
+    },
+    newProfile: {
+        color: '#22b600',
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginTop: 50,
+        textAlign: 'center',
+
     }
 })
