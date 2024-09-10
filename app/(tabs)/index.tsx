@@ -1,10 +1,18 @@
-import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
+import { View, Text, StyleSheet, Button, TextInput, FlatList } from 'react-native' // 
 import React, { useState } from 'react'
 import { useRouter } from 'expo-router';
 
 export default function ExploreScreen() {
   const router = useRouter();
   const [name, setName] = useState('');
+
+  const [fruits] = useState([
+    {id: '1', name: 'Apple'},
+    {id: '2', name: 'Orange'},
+    {id: '3', name: 'Banana'},
+    {id: '4', name: 'Grape'},
+    {id: '5', name: 'Guava'},
+  ])
 
   return (
     <View style={styles.container}>
@@ -18,7 +26,14 @@ export default function ExploreScreen() {
       value={name}
       onChangeText={setName}
       />
+
+      <Text style={styles.name}>{`My name is: ${name}`}</Text>
       
+      <Button 
+      title="Go to Explore"
+      onPress={() => router.push('/(tabs)/explore')}
+      />
+
       <Button 
       title="Go to Explore"
       onPress={() => router.push('/(tabs)/explore')}
@@ -27,6 +42,14 @@ export default function ExploreScreen() {
       <Button 
       title="Go to Profile"
       onPress={() => router.push('/(tabs)/profile')}
+      />
+
+      <FlatList
+      data={fruits}
+      keyExtractor={(item) => item.id}
+      renderItem={({item}) => (
+        <Text style={styles.listStyle}>{item.name}</Text>
+      )}
       />
     </View>
   )
@@ -57,6 +80,19 @@ const styles = StyleSheet.create({
     width: '80%',
     marginBottom: 20,
     color: '#ffffff'
+  },
+  name: {
+    fontSize: 20,
+    color: 'green'
+  },
+  listStyle: {
+    color: '#ffffff',
+    fontSize: 18,
+    padding: 10,
+    borderBottomColor: 'gray',
+    borderBottomWidth: 1,
+    width: '100%',
+    textAlign: 'center',
   }
   
 });

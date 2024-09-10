@@ -1,0 +1,13 @@
+<!-- 
+-------IMPORTS--------
+View = This is like a div in HTML - a container
+Text = This is to displa texts - example = <p> tag, <h1> tag, and so on
+Input = This is to use an input box to type texts = like the <input> tag in HTML  
+Stylesheet = This is use to style the elements. = const style = Stylesheet.create({ styles go in here})
+Flatlist = used to display lists of items like <li> tag in HTML
+
+-----React HOOKS-------
+useRoute = This is used for page navigation = const router = useRouter()
+useState = used to manage state values. When state values change, the component re-renders and the value changes. eg. const [count, setCount] = useState(0);
+
+-->
