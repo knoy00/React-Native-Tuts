@@ -18,7 +18,7 @@ export default function Loggin() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>LOGIN</Text>
       <TextInput
       style={styles.input}
       placeholder = 'Username'
@@ -33,9 +33,19 @@ export default function Loggin() {
       onChangeText={setPassword}
        />
 
+       <View>
+        <Text>Remember me</Text>
+        <Text style={styles.forgotPass}>Forgot password?</Text>
+       </View>
+
     <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
+
+      <View>
+        <Text>Don't have an account?</Text>
+        <Text>Signup here</Text>
+      </View>
        
     </View>
   )
@@ -55,32 +65,40 @@ const styles = StyleSheet.create({
     title: {
         color: '#000000',
         fontSize: '45px',
-        textAlign: 'center',
-        paddingBottom: '30px',
+        paddingBottom: 30,
+        marginLeft: 0,
+        fontWeight: 'bold'
 
     },
     input: {
-        height: 40,
+        height: 55,
         borderColor: '#000000',
         borderWidth: 1,
         paddingHorizontal: 10,
-        width: '80%',
+        width: '90%',
         marginTop: 20,
         color: '#000000',
         fontSize: '25px',
-        borderRadius: 10
+        borderRadius: 0
 
     },
     button: {
-        backgroundColor: '#6200ee',
+        backgroundColor: '#000000',
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
         marginTop: 10,
+        width: '90%',
+        height: 55
       },
       buttonText: {
-        color: '#fff',
-        fontSize: 16,
+        color: '#ffffff',
+        fontSize: 28,
         fontWeight: 'bold',
       },
+
+      forgotPass: {
+        color: 'green',
+        fontSize: 21
+      }
 })
