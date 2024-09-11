@@ -34,7 +34,7 @@ export default function Loggin() {
        />
 
        <View>
-        <Text>Remember me</Text>
+        <Text style={styles.account}>Remember me</Text>
         <Text style={styles.forgotPass}>Forgot password?</Text>
        </View>
 
@@ -43,8 +43,8 @@ export default function Loggin() {
       </TouchableOpacity>
 
       <View>
-        <Text>Don't have an account?</Text>
-        <Text>Signup here</Text>
+        <Text style={styles.account}>Don't have an account?</Text>
+        <Text style={styles.forgotPass}>Signup here</Text>
       </View>
        
     </View>
@@ -99,6 +99,11 @@ const styles = StyleSheet.create({
 
       forgotPass: {
         color: 'green',
-        fontSize: 21
+        fontSize: 21,
+      },
+
+      account: {
+        fontSize: 20,
+        marginTop: 20,
       }
 })
