@@ -33,7 +33,7 @@ export default function Loggin() {
       onChangeText={setPassword}
        />
 
-       <View>
+       <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90%', marginTop: 10}}>
         <Text style={styles.account}>Remember me</Text>
         <Text style={styles.forgotPass}>Forgot password?</Text>
        </View>
@@ -42,7 +42,7 @@ export default function Loggin() {
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
-      <View>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '90%'}}>
         <Text style={styles.account}>Don't have an account?</Text>
         <Text style={styles.forgotPass}>Signup here</Text>
       </View>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
-        marginTop: 10,
+        marginTop: 50,
         width: '90%',
         height: 55
       },
@@ -100,10 +100,11 @@ const styles = StyleSheet.create({
       forgotPass: {
         color: 'green',
         fontSize: 21,
+        marginTop: 20,
       },
 
       account: {
-        fontSize: 20,
+        fontSize: 21,
         marginTop: 20,
       }
 })
