@@ -1,6 +1,5 @@
-import { View, Text, StyleSheet, Image, ScrollView, Dimensions  } from 'react-native'
-import React from 'react'
-
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -10,96 +9,90 @@ export default function Home() {
           <Text style={styles.titleBar_Title}>Home</Text>
         </View>
 
-  {/* Top picks section with images */}
-        <View style={styles.topPicks}  accessibilityLabel='topPicks'>
-          <View >
-            <Text style={styles.topPicks_header}>Top Picks for You</Text>
+        {/* *******************************************************Top picks section with images************************************************************************** */}
 
-            <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
-              <View style={styles.topPicks_img_container}>
+        <View style={styles.topPicks} accessibilityLabel='topPicks'>
+        <Text style={[styles.topPicks_header, { paddingLeft: 10 }]}>Top Picks for You</Text>
 
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
-                      <Image
-                      source={require('../../assets/images/drake.jpg')}
-                      style={styles.img_artiste}
-                      />
-                  </View>
 
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
-                      <Image
-                      source={require('../../assets/images/future.jpg')}
-                      style={styles.img_artiste}
-                      />
-                  </View>
-
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
-                      <Image
-                      source={require('../../assets/images/young_thug.jpg')}
-                      style={styles.img_artiste}
-                      />
-                  </View>
+          <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View style={styles.topPicks_img_container}>
+              <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                <Image source={require('../../assets/images/drake.jpg')} style={styles.img_artiste} />
               </View>
-            </ScrollView>
-          </View>
+              <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                <Image source={require('../../assets/images/future.jpg')} style={styles.img_artiste} />
+              </View>
+              <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                <Image source={require('../../assets/images/young_thug.jpg')} style={styles.img_artiste} />
+              </View>
+            </View>
+          </ScrollView>
         </View>
 
-        <View style={styles.explore}  accessibilityLabel='explore'>
-          <View >
-            <Text style={styles.topPicks_header}>Explore Afrobeats</Text>
+        {/****************************************************************** explore afrobeats section ***************************************************************************************/}
 
-            <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
-              <View style={styles.explore_img_container}>
+        <View style={styles.explore} accessibilityLabel='explore'>
+          <Text style={styles.topPicks_header}>Explore Afrobeats</Text>
 
-                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
-                      <Image
-                      source={require('../../assets/images/Asake.jpg')}
-                      style={styles.img_artiste}
-                      />
-                      <Text>Asake</Text>
-                  </View>
-
-                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
-                      <Image
-                      source={require('../../assets/images/Davido.jpg')}
-                      style={styles.img_artiste}
-                      />
-                      <Text>Burna Boy</Text>
-                  </View>
-
-                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
-                      <Image
-                      source={require('../../assets/images/King Promise.jpg')}
-                      style={styles.img_artiste}
-                      />
-                      <Text>Davido</Text>
-                  </View>
-
-                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
-                      <Image
-                      source={require('../../assets/images/Burna Boy.jpg')}
-                      style={styles.img_artiste}
-                      />
-                      <Text>Davido</Text>
-                  </View>
+          <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View style={styles.explore_img_container}>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Asake.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Asake</Text>
               </View>
-            </ScrollView>
-          </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Davido.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Davido</Text>
+              </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/King Promise.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>King Promise</Text>
+              </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Burna Boy.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Burna Boy</Text>
+              </View>
+            </View>
+          </ScrollView>
         </View>
 
-        
-        
+        {/* *************************************************************Trending Today*******************************************************************************888 */}
+
+        <View style={styles.explore} accessibilityLabel='explore'>
+          <Text style={styles.topPicks_header}>Trending Now</Text>
+
+          <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View style={styles.explore_img_container}>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Tyla.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Tyla</Text>
+              </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Kendrick.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Kendrick Lamar</Text>
+              </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Ayra.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Ayra Starr</Text>
+              </View>
+              <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                <Image source={require('../../assets/images/Burna Boy.jpg')} style={styles.img_artiste} />
+                <Text style={styles.explore_names}>Burna Boy</Text>
+              </View>
+            </View>
+          </ScrollView>
+        </View>
+
       </View>
     </ScrollView>
-  )
+  );
 }
-
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#000000",
-    height: "100%",
-    width: "100%",
-    color: "#ffffff",
+    flex: 1,
     padding: 0
   },
   
@@ -109,36 +102,28 @@ const styles = StyleSheet.create({
 
   titleBar: {
     width: "100%",
-    height: "10%",
-    marginTop: 30,
+    height: 60,
+    marginTop: 60,
     paddingLeft: 15,
-    position: "absolute",
-    zIndex: 1,
-    top: 0,
-    left: 0,
-    right: 0
+    justifyContent: 'center'
   },
 
   titleBar_Title: {
     fontSize: 35,
     color: "#ffffff",
-    marginTop: 40,
     fontWeight: "bold"
   },
 
   topPicks: {
     width: "100%",
-    height: "58%",
-    marginTop: 120,
-    padding: 15,
+    marginTop: 10,
+    padding: 0,
   },
 
   topPicks_header: {
     fontSize: 23,
     fontWeight: "bold",
-    fontFamily: "Poppins",
-    color: "#ffffff"
-
+    color: "#ffffff",
   },
 
   topPicks_img_container: {
@@ -146,10 +131,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: 30,
-    gap: 20,
-  
-
-  
+    gap: 15,
   },
 
   imageContainer: {
@@ -167,16 +149,14 @@ const styles = StyleSheet.create({
   },
 
   explore: {
-    marginTop: -30,
+    marginTop: 20,
     width: "100%",
-    height: "58%",
     padding: 15,
   },
 
   explore_header: {
     fontSize: 23,
     fontWeight: "bold",
-    fontFamily: "Poppins",
     color: "#ffffff"
   },
 
@@ -185,7 +165,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: 30,
-    gap: 20,
+    gap: 10,
   },
 
   exploreContainer: {
@@ -202,6 +182,21 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
 
+  explore_names: {
+    color: "#ffffff",
+    marginTop: 5,
+    fontSize: 16
+  },
 
+  trending: {
+    marginTop: 20,
+    width: "100%",
+    padding: 15,
+  },
 
-})
+  trendingText: {
+    fontSize: 23,
+    fontWeight: "bold",
+    color: "#ffffff"
+  }
+});
