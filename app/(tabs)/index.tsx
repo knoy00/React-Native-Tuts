@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView, Dimensions  } from 'react-native'
 import React from 'react'
 
 
@@ -45,30 +45,41 @@ export default function Home() {
 
         <View style={styles.explore}  accessibilityLabel='explore'>
           <View >
-            <Text style={styles.topPicks_header}>Explore</Text>
+            <Text style={styles.topPicks_header}>Explore Afrobeats</Text>
 
             <ScrollView contentContainerStyle={styles.scrollContent} horizontal={true} showsHorizontalScrollIndicator={false}>
-              <View style={styles.topPicks_img_container}>
+              <View style={styles.explore_img_container}>
 
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
                       <Image
-                      source={require('../../assets/images/drake.jpg')}
+                      source={require('../../assets/images/Asake.jpg')}
                       style={styles.img_artiste}
                       />
+                      <Text>Asake</Text>
                   </View>
 
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
                       <Image
-                      source={require('../../assets/images/future.jpg')}
+                      source={require('../../assets/images/Davido.jpg')}
                       style={styles.img_artiste}
                       />
+                      <Text>Burna Boy</Text>
                   </View>
 
-                  <View accessibilityLabel='artistes' style={styles.imageContainer}>
+                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
                       <Image
-                      source={require('../../assets/images/young_thug.jpg')}
+                      source={require('../../assets/images/King Promise.jpg')}
                       style={styles.img_artiste}
                       />
+                      <Text>Davido</Text>
+                  </View>
+
+                  <View accessibilityLabel='artistes' style={styles.exploreContainer}>
+                      <Image
+                      source={require('../../assets/images/Burna Boy.jpg')}
+                      style={styles.img_artiste}
+                      />
+                      <Text>Davido</Text>
                   </View>
               </View>
             </ScrollView>
@@ -88,7 +99,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000",
     height: "100%",
     width: "100%",
-    color: "#ffffff"
+    color: "#ffffff",
+    padding: 0
   },
   
   scrollContent: {
@@ -99,7 +111,12 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "10%",
     marginTop: 30,
-    paddingLeft: 10
+    paddingLeft: 15,
+    position: "absolute",
+    zIndex: 1,
+    top: 0,
+    left: 0,
+    right: 0
   },
 
   titleBar_Title: {
@@ -112,7 +129,7 @@ const styles = StyleSheet.create({
   topPicks: {
     width: "100%",
     height: "58%",
-    marginTop: 10,
+    marginTop: 120,
     padding: 15,
   },
 
@@ -150,7 +167,7 @@ const styles = StyleSheet.create({
   },
 
   explore: {
-    marginTop: -100,
+    marginTop: -30,
     width: "100%",
     height: "58%",
     padding: 15,
@@ -163,7 +180,28 @@ const styles = StyleSheet.create({
     color: "#ffffff"
   },
 
-  
+  explore_img_container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 30,
+    gap: 20,
+  },
+
+  exploreContainer: {
+    width: 165,
+    height: 200,
+    backgroundColor: "red",
+    borderRadius: 10
+  },
+
+  img_explore: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    borderRadius: 10
+  },
+
 
 
 })
