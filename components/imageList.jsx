@@ -14,11 +14,14 @@ export default function ImageList({headerText, data, imageStyle, containerStyle}
                 <View key={index} style={[styles.imageContainer, containerStyle]}>
                     <Image source={item.image} style={[styles.image, imageStyle]} />
                     {item.name && <Text style={styles.imageName}>{item.name}</Text>}
+                    {item.description && <Text style={styles.descriptionText}>{item.description}</Text>}
                 </View>
             );
         })}
+        
 
         </View>
+        <Text style={styles.imageName}>hello</Text>
 
       </ScrollView>
     </View>
@@ -55,6 +58,14 @@ const styles = StyleSheet.create({
       color: '#ffffff',
       marginTop: 5,
       fontSize: 16,
-      backgroundColor: "red"
     },
+    descriptionText: {
+        color: '#efefef',
+        fontSize: 20,
+        fontWeight: 'bold',
+        paddingLeft: 10,
+        paddingTop: 10,
+        position: 'absolute',
+        marginBottom: 0
+    }
   });

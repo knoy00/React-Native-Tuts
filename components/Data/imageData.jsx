@@ -18,3 +18,10 @@ export const trendingNowData = [
     {image: require('../../assets/images/Ayra.jpg'),                name: 'Ayra'},
     {image: require('../../assets/images/Burna Boy.jpg'),           name: 'Burna Boy'},
 ];
+
+export const workoutData = [
+    {image: require('../../assets/images/workout.jpg'),               description: 'Unreal Music'},
+    {image: require('../../assets/images/workout3.jpg'),              description: 'Pure Workout'},
+
+
+]

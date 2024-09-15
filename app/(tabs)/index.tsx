@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import ImageList from '../../components/imageList.jsx';
-import { topPicksData, exploreAfrobeatsData, trendingNowData } from '../../components/Data/imageData.jsx'; 
+import { topPicksData, exploreAfrobeatsData, trendingNowData, workoutData } from '../../components/Data/imageData.jsx'; 
 
 export default function Home() {
   return (
@@ -31,6 +31,12 @@ export default function Home() {
         {/* Trending Now Section */}
         <ImageList headerText="Trending Now"
          data={trendingNowData} 
+         />
+
+        <ImageList headerText="Workout" 
+        data={workoutData}
+        imageStyle={{width: "100%", height: "100%"}}
+        containerStyle={{width: 320, height: 400}}
          />
 
 
