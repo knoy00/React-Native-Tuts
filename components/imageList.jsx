@@ -3,26 +3,25 @@ import React from 'react'
 
 export default function ImageList({headerText, data, imageStyle, containerStyle}) {
   return (
+    
     <View style={styles.container}>
       <Text style={styles.header}>{headerText}</Text>
 
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={styles.imageRow}>
-        {data.map((item, index) => {
-              // Log the entire item object
-            return (
-                <View key={index} style={[styles.imageContainer, containerStyle]}>
-                    <Image source={item.image} style={[styles.image, imageStyle]} />
-                    {item.name && <Text style={styles.imageName}>{item.name}</Text>}
-                    {item.description && <Text style={styles.descriptionText}>{item.description}</Text>}
-                </View>
-            );
-        })}
-        
-
+           {data.map((item, index) => {
+               return (
+                 <View >
+                   <View key={index} style={[styles.imageContainer, containerStyle]}>
+                       <Image source={item.image} style={[styles.image, imageStyle]} />
+                       {item.logoTxt && <Text style={styles.descriptionText}>{item.logoTxt}</Text>}
+                   </View>
+                   {item.name && <Text style={styles.imageName}>{item.name}</Text>}
+                   {item.description && <Text style={styles.imageName}>{item.description}</Text>}
+                 </View>
+               );
+           })}
         </View>
-        <Text style={styles.imageName}>hello</Text>
-
       </ScrollView>
     </View>
   );

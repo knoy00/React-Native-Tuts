@@ -12,7 +12,7 @@ export default function Loggin() {
             Alert.alert('Please enter username and password')
         }
         else{
-            Alert.alert('Login successfull')
+            Alert.alert('Login successful')
         }
     }
 
@@ -56,14 +56,14 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#000000',
         height: 1000,
         marginTop: 0
 
     },
 
     title: {
-        color: '#000000',
+        color: '#ffffff',
         fontSize: '45px',
         paddingBottom: 30,
         marginLeft: 0,
@@ -72,18 +72,18 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 55,
-        borderColor: '#000000',
+        borderColor: '#ffffff',
         borderWidth: 1,
         paddingHorizontal: 10,
         width: '90%',
         marginTop: 20,
-        color: '#000000',
+        color: '#ffffff',
         fontSize: '25px',
         borderRadius: 10
 
     },
     button: {
-        backgroundColor: '#000000',
+        backgroundColor: '#ffffff',
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         height: 55
       },
       buttonText: {
-        color: '#ffffff',
+        color: '#000000',
         fontSize: 28,
         fontWeight: 'bold',
       },

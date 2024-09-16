@@ -19,9 +19,10 @@ export const trendingNowData = [
     {image: require('../../assets/images/Burna Boy.jpg'),           name: 'Burna Boy'},
 ];
 
+
 export const workoutData = [
-    {image: require('../../assets/images/workout.jpg'),               description: 'Unreal Music'},
-    {image: require('../../assets/images/workout3.jpg'),              description: 'Pure Workout'},
+    {image: require('../../assets/images/workout.jpg'),               logoTxt: 'Unreal Music', description: 'Elevate your soul'},
+    {image: require('../../assets/images/workout3.jpg'),              logoTxt: 'Unreal Music', description: 'Put your back in it'},
 
 
 ]
